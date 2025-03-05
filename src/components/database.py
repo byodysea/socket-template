@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine, Column, String
 from sqlalchemy.ext.declarative import declarative_base
 
-from src.utils.database import DatabaseHandler
-from src.utils.logger import logger
+from laserfocus.utils.database import DatabaseHandler
+from laserfocus.utils.logger import logger
 
 import os
 

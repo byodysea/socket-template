@@ -4,7 +4,8 @@ from gevent import pywsgi
 from geventwebsocket.handler import WebSocketHandler
 import os
 from dotenv import load_dotenv
-from src.utils.logger import logger
+
+from laserfocus.utils.logger import logger
 
 load_dotenv()
 

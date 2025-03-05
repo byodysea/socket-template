@@ -1,6 +1,7 @@
 from flask import request
 from flask_socketio import emit
-from src.utils.logger import logger
+
+from laserfocus.utils.logger import logger
 
 def deploy_main_routes(socketio):
     
