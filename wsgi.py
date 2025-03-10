@@ -1,8 +1,8 @@
 from gevent import pywsgi
 from geventwebsocket.handler import WebSocketHandler
 from dotenv import load_dotenv
-import os
 from run import application
+import os
 
 load_dotenv()
 

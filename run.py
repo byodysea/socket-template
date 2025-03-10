@@ -2,20 +2,16 @@ from flask import Flask
 from flask_socketio import SocketIO
 from gevent import pywsgi
 from geventwebsocket.handler import WebSocketHandler
-import os
-from dotenv import load_dotenv
-
 from laserfocus.utils.logger import logger
-
-load_dotenv()
+import os
 
 def create_app():
 
     app = Flask(__name__)
     socket = SocketIO(app, cors_allowed_origins="*", async_mode='gevent')
 
-    from src.app.main import deploy_main_routes
-    deploy_main_routes(socket)
+    from src.app.event_manager import register_socket_events
+    register_socket_events(socket)
 
     @app.route('/')
     def index():
