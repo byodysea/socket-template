@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Add labels for metadata
-LABEL maintainer="maintainer"
+LABEL maintainer="laserfocus"
 LABEL name="socket-template"
 LABEL version="1.0"
 LABEL description=""
