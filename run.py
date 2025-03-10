@@ -10,8 +10,8 @@ def create_app():
     app = Flask(__name__)
     socket = SocketIO(app, cors_allowed_origins="*", async_mode='gevent')
 
-    from src.app.event_manager import register_socket_events
-    register_socket_events(socket)
+    from src.app.main import register_main_events
+    register_main_events(socket)
 
     @app.route('/')
     def index():

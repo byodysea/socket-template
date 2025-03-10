@@ -3,7 +3,7 @@ from flask_socketio import emit
 
 from laserfocus.utils.logger import logger
 
-def register_socket_events(socketio):
+def register_main_events(socketio):
     
     @socketio.on('connect')
     def handle_connect():
